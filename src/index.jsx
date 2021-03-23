@@ -2,9 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Import Redux
+// Import Redux and Middlewares
 import { Provider } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { logger } from 'redux-logger';
 
 // Import CSS
 import '../assets/stylesheets/application.scss';
@@ -18,13 +19,16 @@ import App from './components/app.jsx'
 
 // List reducers
 const reducers = combineReducers({
-  flats: flatsReducer
+  flats: flatsReducer,
   selectedFlat: selectedFlatReducer
 });
 
-// Render React DOM
+// List middlewares
+const middlewares = applyMiddleware(logger);
+
+// Render React DOM, creating store and calling middlewares
 ReactDOM.render(
-  <Provider store={createStore(reducers)} >
+  <Provider store={createStore(reducers, {}, middlewares)} >
     <App />
   </Provider>,
   document.getElementById('root'));
