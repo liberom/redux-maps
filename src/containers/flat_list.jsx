@@ -5,18 +5,7 @@ import { setFlats } from '../actions';
 
 import Flat from '../containers/flat.jsx';
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators(
-    { setFlats: setFlats },
-    dispatch
-  );
-}
 
-function mapStateToProps(state) {
-  return {
-    flats: state.flats
-  };
-}
 
 class FlatList extends Component {
   // Temp code
@@ -45,6 +34,17 @@ class FlatList extends Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { setFlats: setFlats },
+    dispatch
+  );
+}
 
+function mapStateToProps(state) {
+  return {
+    flats: state.flats
+  };
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(FlatList);
