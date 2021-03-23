@@ -16,14 +16,10 @@ function mapDispatchToProps(dispatch) {
 }
 
 class Flat extends Component {
-  const style = {
-    backgroundImage: `url(${this.props.flat.imageUrl})`
-  };
-
   render() {
     return (
       <div className="flat card-container" >
-        <div className={`card${this.props.selected ? ' active' : '' }`} style={style} >
+        <div className={`card${this.props.selected ? ' active' : '' }`} style={{backgroundImage: url(`${this.props.flat.imageUrl}`)}} >
           <div className="card-category" > {this.props.flat.price} {this.props.flat.priceCurrency}</div>
           <div className="card-description" >
             <h2> {this.props.flat.name} </h2>
