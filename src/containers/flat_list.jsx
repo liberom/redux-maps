@@ -12,6 +12,12 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
+function mapStateToProps(state) {
+  return {
+    flats: state.flats
+  };
+}
+
 class FlatList extends Component {
   // Temp code
   static defaultProps = {
@@ -41,4 +47,4 @@ class FlatList extends Component {
 
 
 
-export default connect(null, mapDispatchToProps)(FlatList);
+export default connect(mapStateToProps, mapDispatchToProps)(FlatList);
