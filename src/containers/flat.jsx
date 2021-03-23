@@ -18,8 +18,9 @@ class Flat extends Component {
   render() {
     // const style needs to be inside render()
     const style = {
-      backgroundImage: url("https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg")
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${this.props.flat.imageUrl})`
     }
+
 
     let classes = "flat card"
     if (this.props.flat === this.props.selectedFlat) {
@@ -27,7 +28,7 @@ class Flat extends Component {
     }
 
     return (
-      <div className="card-container" >
+
         <div className={classes} style={style} >
           <div className="card-category" > {this.props.flat.price} {this.props.flat.priceCurrency}</div>
           <div className="card-description" >
@@ -35,7 +36,7 @@ class Flat extends Component {
           </div>
           <a className="card-link" href="#" onClick={this.handleClick} ></a>
         </div>
-      </div>
+
     );
   }
 
