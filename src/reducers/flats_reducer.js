@@ -9,6 +9,13 @@ export default function(state, action) {
   }
   // handle some action
 
+  switch (action.type) {
+    case 'SET_FLATS':
+      return action.payload;
+    default:
+      return state;
+  }
+
 };
 
 
