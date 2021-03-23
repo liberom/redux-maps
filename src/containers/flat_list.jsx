@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setFlats } from '../actions';
 
-import Flat from '../containers/flat.jsx';
+import Flat from './flat.jsx';
 
 
 
