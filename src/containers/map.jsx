@@ -10,9 +10,10 @@ class SimpleMap extends Component {
     let center = { lat: 48.85, lng: 2.35 }
 
     if (this.props.selectedFlat) {
-      marker = <Marker style={{width: '20px', height: '20px', backgroundColor: 'red', borderRadius: '50%', zIndex: '1000' }}
-      lat={this.props.selectedFlat.lat}
-      lng={this.props.selectedFlat.lng} />;
+      marker =  <Marker className="marker"
+                  lat={this.props.selectedFlat.lat}
+                  lng={this.props.selectedFlat.lng} />;
+
 
       center = {
         lat: this.props.selectedFlat.lat,
@@ -22,12 +23,11 @@ class SimpleMap extends Component {
 
     return (
       // Important! Always set the container height explicitly
-      <div className="col-sm-5" style={{ height: '100vh', width: '100%' }}>
-
+      <div className="col-sm-5" style={{ height: '100vh' }}>
         <GoogleMapReact
           // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
           defaultCenter={center}
-          defaultZoom={15} >
+          defaultZoom={12} >
           {marker}
         </GoogleMapReact>
       </div>

@@ -28,15 +28,12 @@ class Flat extends Component {
     }
 
     return (
-
-        <div className={classes} style={style} >
-          <div className="card-category" > {this.props.flat.price} {this.props.flat.priceCurrency}</div>
+        <div className={classes} style={style} onClick={this.handleClick}>
           <div className="card-description" >
             <h2> {this.props.flat.name} </h2>
+            <p>{this.props.flat.price} {this.props.flat.priceCurrency}</p>
           </div>
-          <a className="card-link" href="#" onClick={this.handleClick} ></a>
         </div>
-
     );
   }
 
