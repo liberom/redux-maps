@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { logger } from 'redux-logger';
+import reduxPromise from 'redux-promise';
 
 // Import CSS
 import '../assets/stylesheets/application.scss';
@@ -24,7 +25,7 @@ const reducers = combineReducers({
 });
 
 // List middlewares
-const middlewares = applyMiddleware(logger);
+const middlewares = applyMiddleware(reduxPromise, logger);
 
 // Render React DOM, creating store and calling middlewares
 ReactDOM.render(
