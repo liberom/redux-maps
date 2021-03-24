@@ -28,11 +28,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  .card {
-    width: calc(50% - 10px);
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
+  // .card {
+  //   width: calc(50% - 10px);
+  //   margin-right: 10px;
+  //   margin-bottom: 10px;
+  // }
 }
 
 .marker {
@@ -43,10 +43,10 @@ body {
 }
 
 .flat {
-  flex: 50% 0 0;
+  flex: 50% auto 0;
   cursor: pointer;
   border: 6px solid transparent;
-  margin: 2px;
+  margin: 5px;
   width: calc(50% - 10px);
   // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
 }
