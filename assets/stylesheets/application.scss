@@ -23,16 +23,16 @@ body {
 // }
 
 .flat-list {
-  // padding-left: 10px;
-  // width: 60%;
+  padding-left: 10px;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: flex-start;
-  // .card {
-  //   width: calc(50% - 10px);
-  //   margin-right: 10px;
-  //   margin-bottom: 10px;
-  // }
+  justify-content: flex-start;
+  .card {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .marker {
@@ -46,6 +46,8 @@ body {
   flex: 50% 0 0;
   cursor: pointer;
   border: 6px solid transparent;
+  margin: 2px;
+  width: calc(50% - 10px);
   // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
 }
 

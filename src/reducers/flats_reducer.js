@@ -1,5 +1,6 @@
-// No need to name the reducer function
+import { SET_FLATS } from '../actions';
 
+// No need to name the reducer function
 export default function(state, action) {
   // Goal: Compute and return a new state
 
@@ -10,7 +11,7 @@ export default function(state, action) {
   // handle some action
 
   switch (action.type) {
-    case 'SET_FLATS':
+    case SET_FLATS:
       return action.payload;
     default:
       return state;
